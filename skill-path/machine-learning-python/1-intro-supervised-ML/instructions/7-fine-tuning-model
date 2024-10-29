@@ -1,0 +1,32 @@
+## Fine-tuning the model
+
+Our model got an accuracy score of approximately 82.56. That means roughly 82.56% of our predictions were correct.
+
+That's a pretty good result, but building machine learning models is an iterative process. We can try to improve upon our result.
+
+![7.1-m736](../images/7.1-m736.svg)
+
+When we instantiated the LinearSVC model, we defined the following parameters:
+
+- penalty="l2"
+- loss="squared_hinge"
+- C=10
+
+While we don't know what these values imply for our model, we can experiment with them.
+
+In an attempt to improve upon our result, we will:
+
+- Change the values to one of the above parameters.
+- Add and set another parameter from the documentation.
+
+### Instructions
+1. Create an instance of LinearSVC and assign it to model. Pass the following parameters when instantiating:
+    - penalty="l2"
+    - loss="squared_hinge"
+    - C=20
+    - max_iter=3500
+    - random_state=417
+        - This ensures that the result is reproducible.
+2. Call model.fit() and pass the following parameters to the function:
+    - X_train
+    - y_train
